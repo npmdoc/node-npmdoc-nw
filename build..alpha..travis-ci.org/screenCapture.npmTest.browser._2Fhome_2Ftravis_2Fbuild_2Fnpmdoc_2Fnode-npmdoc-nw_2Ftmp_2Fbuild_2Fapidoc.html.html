@@ -1,0 +1,108 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/nwjs/npm-installer#readme">nw (v0.21.5)</a>
+</h1>
+<h4>A installer for nw.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nw">module nw</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nw.findpath">
+            function <span class="apidocSignatureSpan">nw.</span>findpath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nw" id="apidoc.module.nw">module nw</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nw.findpath" id="apidoc.element.nw.findpath">
+        function <span class="apidocSignatureSpan">nw.</span>findpath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findpath = function () {
+  var bin = bindir;
+  if (process.platform === 'darwin') {
+    if (fs.existsSync(path.join(bin, 'Contents'))) {
+      bin = path.join(bin, 'Contents', 'MacOS', 'nwjs');
+    } else {
+      bin = path.join(bin, 'nwjs.app', 'Contents', 'MacOS', 'nwjs');
+    }
+  } else if (process.platform === 'win32') {
+    bin = path.join(bin, 'nw.exe');
+  } else {
+    bin = path.join(bin, 'nw');
+  }
+  return bin;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
