@@ -1,9 +1,14 @@
-# api documentation for  [nw (v0.21.5)](https://github.com/nwjs/npm-installer#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nw.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nw) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nw.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nw)
+# npmdoc-nw
+
+#### api documentation for  [nw (v0.21.6)](https://github.com/nwjs/npm-installer#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nw.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nw) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nw.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nw)
+
 #### A installer for nw.js
 
-[![NPM](https://nodei.co/npm/nw.png?downloads=true)](https://www.npmjs.com/package/nw)
+[![NPM](https://nodei.co/npm/nw.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/nw)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-nw/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-nw_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-nw/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-nw/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-nw/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-nw/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-nw/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-nw/build/screenCapture.npmPackageListing.svg)
 
@@ -43,8 +48,8 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "7d502dc16f6035ce27e98921d3e41c88a5e620a7",
-        "tarball": "https://registry.npmjs.org/nw/-/nw-0.21.5.tgz"
+        "shasum": "22d7894551d665692222e7f3bef50586e6c87e90",
+        "tarball": "https://registry.npmjs.org/nw/-/nw-0.21.6.tgz"
     },
     "files": [
         "lib",
@@ -52,7 +57,7 @@
         "scripts",
         "index.js"
     ],
-    "gitHead": "a7201b6422ead2e3c9f5f0c04e9d1284d00a824d",
+    "gitHead": "76f414cc4c0fbcbb7dca4d53084307de82e7d91a",
     "homepage": "https://github.com/nwjs/npm-installer#readme",
     "keywords": [
         "nw",
@@ -70,21 +75,17 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "mithgol",
-            "email": "getgit@mithgol.ru"
+            "name": "mithgol"
         },
         {
-            "name": "rogerwang",
-            "email": "wenrui@gmail.com"
+            "name": "rogerwang"
         },
         {
-            "name": "shama",
-            "email": "kyle@dontkry.com"
+            "name": "shama"
         }
     ],
     "name": "nw",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/nwjs/npm-installer.git"
@@ -93,43 +94,8 @@
         "postinstall": "node scripts/install.js",
         "test": "node test/index.js"
     },
-    "version": "0.21.5"
+    "version": "0.21.6"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module nw](#apidoc.module.nw)
-1.  [function <span class="apidocSignatureSpan">nw.</span>findpath ()](#apidoc.element.nw.findpath)
-
-
-
-# <a name="apidoc.module.nw"></a>[module nw](#apidoc.module.nw)
-
-#### <a name="apidoc.element.nw.findpath"></a>[function <span class="apidocSignatureSpan">nw.</span>findpath ()](#apidoc.element.nw.findpath)
-- description and source-code
-```javascript
-findpath = function () {
-  var bin = bindir;
-  if (process.platform === 'darwin') {
-    if (fs.existsSync(path.join(bin, 'Contents'))) {
-      bin = path.join(bin, 'Contents', 'MacOS', 'nwjs');
-    } else {
-      bin = path.join(bin, 'nwjs.app', 'Contents', 'MacOS', 'nwjs');
-    }
-  } else if (process.platform === 'win32') {
-    bin = path.join(bin, 'nw.exe');
-  } else {
-    bin = path.join(bin, 'nw');
-  }
-  return bin;
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
